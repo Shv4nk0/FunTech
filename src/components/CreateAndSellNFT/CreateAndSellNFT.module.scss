@@ -1,0 +1,93 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 28px;
+	padding-inline: 40px;
+	background-color: #141416;
+	margin: 96px;
+	margin-block: 126px;
+
+	margin-inline: auto;
+	max-width: 1256px;
+	// self-align: center;
+
+	border-radius: 32px;
+
+	> div {
+		color: white;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		justify-content: space-between;
+		align-items: start;
+
+		h1 {
+			line-height: 1;
+			font-weight: 500;
+			font-size: 46px;
+			margin-bottom: 12px;
+		}
+
+		.greyText {
+			font-size: 22px;
+			color: grey;
+		}
+
+		.buttons {
+			display: flex;
+			gap: 16px;
+
+			margin-top: 16px;
+			.explore,
+			.sell {
+				border: 2px solid white;
+				font-size: 20px;
+				border-radius: 12px;
+
+				padding: 20px;
+				padding-inline: 28px;
+				background-color: white;
+			}
+
+			.sell {
+				background-color: #141416;
+				color: white;
+				transition-property: all;
+
+				&:hover {
+					border: 2px solid rgb(211, 211, 211);
+					background-color: #3b3b3be3;
+				}
+			}
+
+			.explore {
+				transition-property: all;
+
+				&:hover {
+					border: 2px solid rgb(176, 176, 176);
+					background-color: #d9d9d9e3;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 2200px) {
+		margin-block: 152px;
+		margin-top: 212px;
+		scale: 1.2;
+	}
+
+	@media (min-width: 3000px) {
+		margin-block: 176px;
+		margin-top: 254px;
+		scale: 1.4;
+	}
+
+	@media (min-width: 3500px) {
+		margin-block: 200px;
+		margin-top: 272px;
+		scale: 1.6;
+	}
+}

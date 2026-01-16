@@ -1,0 +1,306 @@
+.wrapper {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: start;
+
+	width: 90%;
+	max-width: 1256px;
+
+	margin-block: 240px;
+	margin-inline: auto;
+
+	gap: 16px;
+
+	.mobileCreators {
+		display: none;
+	}
+
+	.imagesWrapper {
+		will-change: transform;
+		position: absolute;
+		right: 0;
+		width: 811px;
+		height: 652px;
+		z-index: -1;
+
+		img {
+			position: absolute;
+			will-change: opacity, transform;
+		}
+
+		.firstImage {
+			top: -60px;
+			right: 180px;
+		}
+
+		.secondImage {
+			right: -160px;
+			top: 140px;
+		}
+
+		.dots {
+			right: -130px;
+			top: -20px;
+		}
+
+		.arrow {
+			right: 100px;
+			top: 40px;
+		}
+	}
+
+	.line {
+		width: 195px;
+		height: 1px;
+		border-radius: 100%;
+		opacity: 20%;
+		background-color: #201f1f;
+	}
+	h1 {
+		font-size: 64px;
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.discover {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		text-align: left;
+
+		gap: 32px;
+		width: 60%;
+		max-width: 540px;
+
+		.explore,
+		.create {
+			border: 2px solid #141416;
+			border-radius: 12px;
+			padding: 16px;
+			padding-inline: 28px;
+			background: none;
+			font-family: inherit;
+			font-weight: bold;
+		}
+
+		.explore {
+			margin-right: 16px;
+			background-color: #141416;
+			color: white;
+			transition-property: background-color;
+
+			&:hover {
+				background-color: #3b3b3be3;
+				border: 2px solid #3b3b3be3;
+			}
+		}
+
+		.create:hover {
+			background-color: #d9d9d9e3;
+		}
+
+		p {
+			color: #676767;
+			font-family: Inter;
+			b {
+				color: #141416;
+			}
+		}
+	}
+
+	.features {
+		display: flex;
+		gap: 64px;
+		text-align: left;
+		font-size: 22px;
+		margin-top: 48px;
+
+		.amount {
+			font-family: Public Sans;
+			font-size: 42px;
+			font-weight: 600;
+			color: black;
+		}
+
+		.name {
+			font-family: Inter;
+			font-size: 12px;
+			color: #848586;
+		}
+	}
+
+	@media (min-width: 2200px) {
+		margin-block: 296px;
+		scale: 1.2;
+	}
+
+	@media (min-width: 3000px) {
+		margin-block: 360px;
+		scale: 1.4;
+	}
+	@media (min-width: 3500px) {
+		margin-block: 420px;
+		scale: 1.6;
+	}
+
+	// @media (max-width: 1240px) {
+	// 	h1 {
+	// 		font-size: 48px;
+	// 	}
+
+	// 	.discover {
+	// 		width: 60%;
+	// 		max-width: 460px;
+	// 		gap: 24px;
+
+	// 		p {
+	// 			font-size: 14px;
+	// 		}
+
+	// 		.explore,
+	// 		.create {
+	// 			padding: 12px 20px;
+	// 			font-size: 14px;
+	// 		}
+	// 	}
+
+	// 	.features {
+	// 		gap: 48px;
+	// 		font-size: 18px;
+
+	// 		.amount {
+	// 			font-size: 32px;
+	// 		}
+	// 	}
+
+	// 	.imagesWrapper {
+	// 		.firstImage {
+	// 			width: 55%;
+	// 			top: -60px;
+	// 			right: 120px;
+	// 		}
+
+	// 		.secondImage {
+	// 			width: 40%;
+	// 			right: -160px;
+	// 			top: 140px;
+	// 		}
+
+	// 		.dots {
+	// 			width: 15%;
+	// 			right: -110px;
+	// 			top: 40px;
+	// 		}
+
+	// 		.arrow {
+	// 			width: 12%;
+	// 			right: 70px;
+	// 			top: 60px;
+	// 		}
+	// 	}
+	// }
+
+	@media (max-width: 520px) {
+		margin-bottom: 400px;
+		margin-inline: 0;
+		align-items: center;
+		justify-content: center;
+
+		.line {
+			display: none;
+		}
+
+		.mobileCreators {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+
+			font-size: 12px;
+			color: #201f1f;
+
+			.mobileLine {
+				height: 1px;
+				width: 36px;
+				opacity: 0.8;
+				background-color: #201f1f;
+			}
+		}
+
+		h1 {
+			font-size: 48px;
+			text-align: center;
+			margin-inline: auto;
+		}
+
+		.imagesWrapper {
+			width: 100%;
+			height: 350px;
+			right: 300px;
+			top: 400px;
+			opacity: 0.7;
+
+			.firstImage {
+				width: 45%;
+				right: 80px;
+				top: -30px;
+			}
+
+			.secondImage {
+				width: 35%;
+				right: -100px;
+				top: 100px;
+			}
+
+			.dots {
+				width: 12%;
+				right: -80px;
+				top: 10px;
+				opacity: 0.5;
+			}
+
+			.arrow {
+				width: 10%;
+				right: 50px;
+				top: 40px;
+				opacity: 0.6;
+			}
+		}
+
+		.discover {
+			gap: 18px;
+			width: fit-content;
+			p {
+				width: 60%;
+				font-size: 12px;
+				line-height: 1.5;
+			}
+
+			.explore,
+			.create {
+				padding: 12px 16px;
+				font-size: 12px;
+				margin-right: 8px;
+			}
+		}
+
+		.features {
+			gap: 32px;
+			font-size: 14px;
+			margin-top: 32px;
+
+			.amount {
+				font-size: 24px;
+			}
+
+			.name {
+				font-size: 10px;
+			}
+		}
+
+		.line {
+			width: 150px;
+			height: 1px;
+		}
+	}
+}

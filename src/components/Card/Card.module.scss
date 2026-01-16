@@ -1,0 +1,71 @@
+.wrapper {
+	width: 280px;
+	height: 395px;
+	background-color: white;
+	padding: 12px;
+	border-radius: 24px;
+
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	gap: 18px;
+	box-shadow: 16px 16px 72px 0px #00000023;
+
+	.imageContainer {
+		position: relative;
+
+		img {
+			width: 254px;
+			height: 254px;
+		}
+		.timer {
+			position: absolute;
+			right: 12px;
+			top: 12px;
+			color: white;
+			background-color: #1c1d2035;
+			padding: 6px;
+			padding-inline: 12px;
+			border-radius: 10px;
+		}
+	}
+
+	.cardName {
+		color: black;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		button {
+			background-color: black;
+			border: none;
+			font-weight: 600;
+			color: white;
+			border-radius: 12px;
+			padding: 10px;
+			padding-inline: 24px;
+
+			&:hover {
+				background-color: #3b3b3be3;
+			}
+		}
+
+		.etherium {
+			display: flex;
+			color: #141416;
+			align-items: center;
+		}
+	}
+}

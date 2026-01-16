@@ -1,0 +1,71 @@
+.wrapper {
+	width: 100vw;
+
+	color: #c5c5c5;
+	padding-block: 64px;
+
+	box-sizing: border-box;
+	background-color: #f1f1f1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 64px;
+	overflow: hidden;
+
+	h1 {
+		font-weight: 500;
+		margin: 0;
+		font-size: 50px;
+	}
+
+	.slider {
+		width: 130vw;
+		// margin-left: -80px;
+		height: auto;
+		// padding-bottom: 20px;
+		overflow: visible;
+
+		:global(.swiper-slide) {
+			width: 280px;
+		}
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-around;
+
+		width: 164px;
+		background-color: white;
+		padding-block: 20px;
+
+		box-shadow: 0px 32px 48px 0px #00000023;
+		border-radius: 24px;
+
+		button {
+			background-color: white;
+			border: none;
+			cursor: pointer;
+			transition-property: opacity;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	@media (min-width: 2200px) {
+		margin-block: 176px;
+		scale: 1.2;
+	}
+
+	@media (min-width: 3000px) {
+		margin-block: 176px;
+		scale: 1.4;
+	}
+
+	@media (min-width: 3500px) {
+		margin-block: 200px;
+		scale: 1.6;
+	}
+}

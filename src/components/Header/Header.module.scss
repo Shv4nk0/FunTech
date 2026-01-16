@@ -1,0 +1,180 @@
+.wrapper {
+	position: fixed;
+	width: 100%;
+	padding-block: 32px;
+	// padding-inline: 96px;
+	justify-content: center;
+	display: flex;
+
+	border-radius: 0px 0px 32px 32px;
+	background-color: #f9f9f959;
+	backdrop-filter: blur(10px);
+
+	font-size: 18px;
+	z-index: 10;
+
+	.block {
+		justify-content: space-between;
+		display: flex;
+		width: 90%;
+		max-width: 1256px;
+
+		a {
+			font-family: Inter;
+			cursor: pointer;
+			color: #606060;
+
+			&:hover {
+				color: black;
+			}
+		}
+
+		button {
+			color: white;
+			background-color: #141416;
+			border: none;
+			border-radius: 16px;
+			height: fit-content;
+			padding: 16px;
+			padding-inline: 24px;
+
+			&:hover {
+				background-color: #3b3b3be3;
+			}
+		}
+
+		.links {
+			display: flex;
+			align-items: center;
+			gap: 32px;
+			width: 50%;
+
+			img {
+				width: 48px;
+			}
+		}
+
+		.burger,
+		.linksMobile {
+			display: none;
+		}
+	}
+
+	@media (max-width: 520px) {
+		.block .burger {
+			display: flex;
+			align-self: center;
+
+			background-color: unset !important;
+			border: none;
+			img {
+				width: 32px;
+				height: 32px;
+			}
+		}
+
+		.mobileLine {
+			height: 1px;
+			width: 80%;
+			background-color: black;
+
+			position: absolute;
+			top: 128px;
+			opacity: 0.2;
+			border-radius: 50%;
+		}
+
+		.block .linksMobile {
+			display: flex;
+			align-items: center;
+
+			div {
+				font-weight: 600;
+				font-size: 20px;
+				margin-left: 4px;
+			}
+		}
+
+		.block .links,
+		.block button {
+			display: none;
+		}
+	}
+	@media (min-width: 2200px) {
+		scale: 1.2;
+	}
+
+	@media (min-width: 3000px) {
+		scale: 1.4;
+	}
+
+	@media (min-width: 3500px) {
+		scale: 1.6;
+	}
+}
+
+@media (max-width: 520px) {
+	.mobileMenu {
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: white;
+		font-weight: 500;
+		z-index: 9;
+		overflow-y: auto;
+		box-sizing: border-box;
+		padding-bottom: 100px;
+
+		nav {
+			position: relative;
+			top: 22%;
+			left: 32px;
+			width: fit-content;
+			display: flex;
+			flex-direction: column;
+			font-size: 40px;
+			// gap: 8px;
+
+			a {
+				color: #606060;
+				width: fit-content;
+			}
+		}
+
+		.mobileBtn {
+			position: fixed;
+			bottom: 32px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: calc(100% - 64px);
+			max-width: 320px;
+			padding-block: 16px;
+			border-radius: 16px;
+			background-color: black;
+			color: white;
+			font-size: 28px;
+			border: none;
+			cursor: pointer;
+			z-index: 1000;
+		}
+	}
+
+	.socials {
+		margin-top: 32px;
+		display: flex;
+		gap: 36px;
+		align-items: center;
+		z-index: 999;
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
