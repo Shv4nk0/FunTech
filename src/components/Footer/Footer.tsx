@@ -26,7 +26,9 @@ const Footer = () => {
 				<div className={styles.line} />
 
 				<div className={styles.bottomBlock}>
-					<div>© 2023</div>
+					<div>
+						© 2023 <span>DiveSea All Rights Reserved.</span>
+					</div>
 					<div className={styles.socials}>
 						<img src={Instagram} />
 						<img src={LinkedIn} />

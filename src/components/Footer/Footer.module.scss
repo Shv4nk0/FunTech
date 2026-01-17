@@ -55,13 +55,16 @@
 			width: 100%;
 			height: 1px;
 			border-radius: 100%;
-			opacity: 25%;
 			background-color: #818181;
 		}
 
 		.bottomBlock {
 			display: flex;
 			justify-content: space-between;
+
+			span {
+				display: none;
+			}
 
 			> div {
 				display: flex;
@@ -79,6 +82,135 @@
 					&:hover {
 						opacity: 0.6;
 					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1040px) {
+		.block {
+			.topBlock {
+				font-size: 18px;
+
+				.nameBlock {
+					display: flex;
+					gap: 10px;
+					font-weight: 500;
+					font-size: 20px;
+					color: white;
+				}
+				.linkBlock {
+					gap: 20px;
+				}
+			}
+		}
+	}
+	@media (max-width: 880px) {
+		.block {
+			.topBlock {
+				font-size: 16px;
+
+				.nameBlock {
+					display: flex;
+					gap: 10px;
+					font-weight: 500;
+					font-size: 18px;
+					color: white;
+
+					img {
+						width: 32px;
+					}
+				}
+				.linkBlock {
+					gap: 18px;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		padding-inline: 48px;
+	}
+	@media (max-width: 690px) {
+		.block {
+			.topBlock {
+				font-size: 14px;
+
+				.linkBlock {
+					gap: 16px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 640px) {
+		width: 100%;
+		padding-inline: 28px;
+		padding-block: 64px;
+		padding-bottom: 40px;
+		.block {
+			width: 100%;
+			flex-direction: column;
+
+			position: relative;
+
+			.topBlock {
+				flex-direction: column;
+				display: flex;
+				gap: 32px;
+				justify-content: space-between;
+				width: 100%;
+
+				.nameBlock {
+					display: flex;
+					gap: 10px;
+					font-weight: 500;
+					font-size: 26px;
+					color: white;
+				}
+
+				.linkBlock {
+					flex-direction: column;
+					align-items: center;
+					align-items: flex-start;
+					justify-content: start;
+					display: flex;
+					gap: 32px;
+
+					a {
+						cursor: pointer;
+						transition: color 0.25s;
+
+						&:hover {
+							color: #b2b2b2;
+						}
+					}
+
+					margin-bottom: 16px;
+				}
+			}
+
+			.bottomBlock {
+				font-size: 16px;
+				justify-content: center;
+
+				> div {
+					display: flex;
+					gap: 16px;
+				}
+
+				.socials {
+					position: absolute;
+					top: 16px;
+					right: 0;
+
+					img {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				span {
+					display: initial;
 				}
 			}
 		}

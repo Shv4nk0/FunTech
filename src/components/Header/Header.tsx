@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.scss";
 import Wave from "../../assets/Wave.png";
 import BurgerMenuOpen from "../../assets/burger.png";
@@ -51,26 +52,34 @@ const Header = () => {
 				<div className={styles.mobileLine} />
 			</div>
 
-			{isMenuOpen && (
-				<div className={styles.mobileMenu}>
-					<button className={styles.close}></button>
+			<AnimatePresence>
+				{isMenuOpen && (
+					<motion.div
+						className={styles.mobileMenu}
+						initial={{ y: -1000 }}
+						animate={{ y: 0 }}
+						exit={{ y: -1000 }}
+						transition={{ duration: 0.4, ease: "easeOut" }}
+					>
+						<button className={styles.close}></button>
 
-					<nav>
-						<a>DISCOVER</a>
-						<a>CREATORS</a>
-						<a>SELL</a>
-						<a>STATS</a>
-						<div className={styles.socials}>
-							<img src={Instagram} />
-							<img src={LinkedIn} />
-							<img src={Facebook} />
-							<img src={Twitter} />
-						</div>
-					</nav>
+						<nav>
+							<a>DISCOVER</a>
+							<a>CREATORS</a>
+							<a>SELL</a>
+							<a>STATS</a>
+							<div className={styles.socials}>
+								<img src={Instagram} />
+								<img src={LinkedIn} />
+								<img src={Facebook} />
+								<img src={Twitter} />
+							</div>
+						</nav>
 
-					<button className={styles.mobileBtn}>CONNECT WALLET</button>
-				</div>
-			)}
+						<button className={styles.mobileBtn}>CONNECT WALLET</button>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</>
 	);
 };

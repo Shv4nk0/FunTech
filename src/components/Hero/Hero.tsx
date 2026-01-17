@@ -3,9 +3,33 @@ import HeroDots from "../../assets/HeroDots.png";
 import HeroArrow from "../../assets/HeroArrow.png";
 import HeroFirst from "../../assets/HeroImageFirst.png";
 import HeroSecond from "../../assets/HeroImageSecond.png";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Hero = () => {
+	const imagesRef = useRef(null);
+	const imagesInView = useInView(imagesRef, {
+		once: true,
+		margin: "0px 0px -100px 0px",
+	});
+
+	const lineRef = useRef(null);
+	const lineInView = useInView(lineRef, {
+		once: true,
+		margin: "0px 0px -100px 0px",
+	});
+
+	const discoverRef = useRef(null);
+	const discoverInView = useInView(discoverRef, {
+		once: true,
+		margin: "0px 0px -100px 0px",
+	});
+
+	const featuresRef = useRef(null);
+	const featuresInView = useInView(featuresRef, {
+		once: true,
+		margin: "0px 0px -100px 0px",
+	});
 	const firstImageMotion = {
 		hidden: { opacity: 0.6, x: 600 },
 		visible: { opacity: 1, x: 0, transition: { duration: 1.2 } },
@@ -32,37 +56,34 @@ const Hero = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			<motion.div className={styles.imagesWrapper}>
+			<motion.div className={styles.imagesWrapper} ref={imagesRef}>
 				<motion.img
 					className={styles.dots}
 					src={HeroDots}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={imagesInView ? "visible" : "hidden"}
+					variants={{ visible: { opacity: 1 }, hidden: { opacity: 0.6 } }}
 				/>
 				<motion.img
 					className={styles.arrow}
 					src={HeroArrow}
 					variants={arrowMotion}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={imagesInView ? "visible" : "hidden"}
 				/>
 				<motion.img
 					className={styles.firstImage}
 					src={HeroFirst}
 					variants={firstImageMotion}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={imagesInView ? "visible" : "hidden"}
 				/>
 				<motion.img
 					className={styles.secondImage}
 					src={HeroSecond}
 					variants={secondImageMotion}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={imagesInView ? "visible" : "hidden"}
 				/>
 			</motion.div>
 
@@ -72,21 +93,20 @@ const Hero = () => {
 			</div>
 
 			<motion.div
+				ref={lineRef}
 				className={styles.line}
 				variants={textMotion}
 				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true }}
+				animate={lineInView ? "visible" : "hidden"}
 				custom={0}
 			/>
 
-			<motion.div className={styles.discover}>
+			<motion.div ref={discoverRef} className={styles.discover}>
 				<div>
 					<motion.h1
 						variants={textMotion}
 						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true }}
+						animate={discoverInView ? "visible" : "hidden"}
 						custom={0}
 					>
 						Discover And
@@ -94,8 +114,7 @@ const Hero = () => {
 					<motion.h1
 						variants={textMotion}
 						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true }}
+						animate={discoverInView ? "visible" : "hidden"}
 						custom={1}
 					>
 						Create NFTs
@@ -105,8 +124,7 @@ const Hero = () => {
 				<motion.p
 					variants={textMotion}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={discoverInView ? "visible" : "hidden"}
 					custom={2}
 				>
 					Discover, Create and Sell NFTs On Our NFT Marketplace With Over
@@ -116,8 +134,7 @@ const Hero = () => {
 				<motion.div
 					variants={textMotion}
 					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+					animate={discoverInView ? "visible" : "hidden"}
 					custom={3}
 				>
 					<button className={styles.explore}>EXPLORE MORE</button>
@@ -126,11 +143,11 @@ const Hero = () => {
 			</motion.div>
 
 			<motion.div
+				ref={featuresRef}
 				className={styles.features}
 				variants={textMotion}
 				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true }}
+				animate={featuresInView ? "visible" : "hidden"}
 				custom={4}
 			>
 				<div>

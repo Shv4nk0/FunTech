@@ -68,4 +68,54 @@
 			align-items: center;
 		}
 	}
+
+	@media (max-width: 640px) {
+		width: 220px;
+		height: 315px;
+		gap: 12px;
+
+		.imageContainer {
+			img {
+				width: 194px;
+				height: 194px;
+			}
+			.timer {
+				font-size: 12px;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				color: white;
+				background-color: #1c1d2035;
+				padding: 6px;
+				padding-inline: 12px;
+				border-radius: 10px;
+			}
+		}
+
+		.cardName {
+			color: black;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			overflow-y: visible;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.bottom {
+			font-size: 12px;
+			margin-top: auto;
+			button {
+				font-size: 12px;
+				border-radius: 12px;
+				padding: 6px;
+				padding-inline: 16px;
+			}
+
+			.etherium {
+				img {
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}
+	}
 }
